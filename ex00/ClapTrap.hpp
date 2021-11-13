@@ -9,12 +9,16 @@ class FragTrap;
 class FragTrap
 {
     public:
-        FragTrap();
         FragTrap(std::string name);
         ~FragTrap();
-        void attack(std::string const &target);
-        void takeDamage(unsigned int amount);
-        void beRepaired(unsigned int amount);
+        void    attack(std::string const &target);
+        void    takeDamage(unsigned int amount);
+        void    beRepaired(unsigned int amount);
+        std::string     name_getter() const;
+        unsigned int    hit_points_getter() const;
+        unsigned int    attack_damage_getter() const;
+        unsigned int    energy_points_getter() const;
+
 
     private:
         std::string _name;

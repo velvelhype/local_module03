@@ -2,7 +2,7 @@
 
 int main()
 {
-    FragTrap a;
+    FragTrap a("hi");
     unsigned int amount = 3;
     const std::string &cell = "enemy";
     a.attack(cell);
