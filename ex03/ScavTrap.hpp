@@ -19,9 +19,12 @@ class ScavTrap : public virtual ClapTrap
         //==GETTER== const
         //==SETTER
         //actions
-        virtual void    attack(std::string const &target) override;
-        virtual void    takeDamage(unsigned int amount) override;
-        virtual void    beRepaired(unsigned int amount) override;
+        // virtual void    attack(std::string const &target) override;
+        // virtual void    takeDamage(unsigned int amount) override;
+        // virtual void    beRepaired(unsigned int amount) override;
+        void    attack(std::string const &target);
+        void    takeDamage(unsigned int amount);
+        void    beRepaired(unsigned int amount);
         //==guardGate==
         void    guardGate();
 };
