@@ -13,6 +13,13 @@ class ClapTrap
         ClapTrap();
         //==constructor with name
         ClapTrap(std::string name);
+        //==constructor with status
+        ClapTrap(
+			std::string		name,
+			unsigned int	hit_points,
+			unsigned int	energy_points,
+			unsigned int	attack_damage
+			);
         //==copy constructor==
         ClapTrap(ClapTrap &ori);
         //==destructor==
@@ -21,9 +28,9 @@ class ClapTrap
         ClapTrap &operator=(const ClapTrap &src);
 
         //==actions==
-        void    attack(std::string const &target);
-        void    takeDamage(unsigned int amount);
-        void    beRepaired(unsigned int amount);
+        virtual void    attack(std::string const &target);
+        virtual void    takeDamage(unsigned int amount);
+        virtual void    beRepaired(unsigned int amount);
         //==getter==
         std::string     name_getter() const;
         unsigned int    hit_points_getter() const;

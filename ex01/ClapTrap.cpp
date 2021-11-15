@@ -14,6 +14,21 @@ ClapTrap::ClapTrap(std::string name):
     _energy_points(10),
     _attack_damage(0)
 {   std::cout << "ClapTrap " << name_getter() <<  " was born!" << std::endl;}
+//==constructor with status
+ClapTrap::ClapTrap(
+	std::string		name,
+	unsigned int	hit_points,
+	unsigned int	energy_points,
+	unsigned int	attack_damage
+	)
+{
+    name_setter(name);
+    hit_points_setter(hit_points);
+    energy_points_setter(energy_points);
+    attack_damage_setter(attack_damage);
+{   std::cout << "ClapTrap " << name_getter() <<  " was born!" << std::endl;}
+};
+
 //copy constructor
 ClapTrap::ClapTrap(ClapTrap &ori)
 {
@@ -71,13 +86,13 @@ void    ClapTrap::takeDamage(unsigned int amount)
     _hit_points -= amount;
     std::cout << "ClapTrap " <<  name_getter() << " take " << amount;
     std::cout  << " of damage!";
-    std::cout << " HP remains " << hit_points_getter() << " points" << std::endl;
+    std::cout << "HP remains " << hit_points_getter() << " points" << std::endl;
 }
 
 void    ClapTrap::beRepaired(unsigned int amount)
 {
     _hit_points += amount;
     std::cout << "ClapTrap " << name_getter() << " repaired ";
-    std::cout  << " for " << amount << " hit points";
-    std::cout << ". HP remains " << hit_points_getter() << " points" << std::endl;
+    std::cout  << " for " << amount << " hit points.";
+    std::cout << " HP remains " << hit_points_getter() << " points" << std::endl;
 };
